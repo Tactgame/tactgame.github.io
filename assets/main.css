@@ -165,3 +165,30 @@ a.button:hover {
   border-bottom: 1px solid #333;
   padding-bottom: 0.5rem;
 }
+
+/* 论坛页面专用样式 */
+.forum-header {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #262626;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.forum-header h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: #ff3d00;
+}
+
+.forum-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 0.5rem 0 1rem;
+}
+
+.forum-container {
+  margin-top: 1rem;
+}
+
