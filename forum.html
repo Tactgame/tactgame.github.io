@@ -5,6 +5,52 @@ permalink: /forum/
 ---
 
 <h1>论坛</h1>
-<p>欢迎来到论坛讨论区！</p>
-<p>由于本站为静态页面，论坛讨论采用 GitHub Discussions 实现，请点击下面按钮进入讨论区：</p>
-<a class="button" href="https://github.com/yourusername/yourrepository/discussions" target="_blank">进入论坛</a>
+<p>欢迎来到论坛讨论区！下方列表显示了所有标记为 <code>forum</code> 的讨论主题（数据来自 GitHub Issues）。</p>
+
+<div id="forum-container">
+  <p>加载中……</p>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const forumContainer = document.getElementById("forum-container");
+  // 请将下面的 yourusername/yourrepository 替换为你的 GitHub 用户名和仓库名
+  const repo = "tactgame/tactgame.github.io";
+  const label = "forum"; // 用于标记讨论主题的标签
+  // 查询开启状态的问题，按创建时间降序排列
+  const apiUrl = `https://api.github.com/repos/${repo}/issues?labels=${label}&state=open&sort=created&direction=desc`;
+  
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      forumContainer.innerHTML = "";
+      if (data.message) {
+        forumContainer.innerHTML = "<p>无法加载讨论数据，请检查 API 限制或仓库设置。</p>";
+        return;
+      }
+      if (data.length === 0) {
+        forumContainer.innerHTML = "<p>暂无讨论，请点击下方按钮发起新讨论。</p>";
+      } else {
+        const ul = document.createElement("ul");
+        data.forEach(issue => {
+          const li = document.createElement("li");
+          li.innerHTML = `<a href="${issue.html_url}" target="_blank">${issue.title}</a> - ${new Date(issue.created_at).toLocaleDateString()}`;
+          ul.appendChild(li);
+        });
+        forumContainer.appendChild(ul);
+      }
+      // 添加“发起新讨论”按钮，点击后跳转至 GitHub Issues 新建页面，并预填标签
+      const newTopicLink = `https://github.com/${repo}/issues/new?labels=${label}`;
+      const newTopicButton = document.createElement("a");
+      newTopicButton.href = newTopicLink;
+      newTopicButton.target = "_blank";
+      newTopicButton.className = "button";
+      newTopicButton.textContent = "发起新讨论";
+      forumContainer.appendChild(newTopicButton);
+    })
+    .catch(error => {
+      forumContainer.innerHTML = "<p>加载讨论失败，请稍后重试。</p>";
+      console.error("Error fetching forum data:", error);
+    });
+});
+</script>
