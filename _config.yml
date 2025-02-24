@@ -1,5 +1,5 @@
 title: "审判行动：致命瞄准官网"
-description: "射击游戏《审判行动：致命瞄准》的官方网站，提供游戏介绍、更新日志、在线试玩、软件下载及排行榜。"
+description: "射击游戏《审判行动：致命瞄准》的官方网站，提供游戏介绍、更新日志、在线试玩、软件下载、排行榜、制作团队信息及论坛入口。"
 theme: minima
-baseurl: ""        # 主站使用空字符串，子站请修改为相应路径
-url: "https://tactgame.github.io"  # 将 yourusername 替换为你的 GitHub 用户名
+baseurl: ""        # 主站请保持为空，子站请修改为相应路径
+url: "https://tactgame.github.io"  # 请将 yourusername 替换为你的 GitHub 用户名
