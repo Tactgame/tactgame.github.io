@@ -9,12 +9,18 @@ permalink: /
   <p>体验紧张刺激的射击战场，决战就在此刻！</p>
 </div>
 
+<div class="announcement">
+  <h2>最新公告</h2>
+  <p>欢迎来到官网！最新版本发布在即，敬请期待更多精彩内容！</p>
+</div>
+
 <div class="button-group">
   <a class="button" href="{{ '/intro/' | relative_url }}">游戏介绍</a>
   <a class="button" href="{{ '/changelog/' | relative_url }}">更新日志</a>
   <a class="button" href="{{ '/play/' | relative_url }}">在线试玩</a>
   <a class="button" href="{{ '/download/' | relative_url }}">软件下载</a>
   <a class="button" href="{{ '/leaderboard/' | relative_url }}">排行榜</a>
+  <a class="button" href="{{ '/gallery/' | relative_url }}">媒体库</a>
   <a class="button" href="{{ '/forum/' | relative_url }}">论坛</a>
   <a class="button" href="{{ '/about/' | relative_url }}">关于</a>
 </div>
