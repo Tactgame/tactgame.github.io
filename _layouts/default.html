@@ -6,25 +6,29 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 </head>
-<body>
+<body class="fade-in">
   <header>
-  <div class="container">
-    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-    <nav>
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">首页</a></li>
-        <li><a href="{{ '/intro/' | relative_url }}">游戏介绍</a></li>
-        <li><a href="{{ '/changelog/' | relative_url }}">更新日志</a></li>
-        <li><a href="{{ '/play/' | relative_url }}">在线试玩</a></li>
-        <li><a href="{{ '/download/' | relative_url }}">软件下载</a></li>
-        <li><a href="{{ '/leaderboard/' | relative_url }}">排行榜</a></li>
-        <li><a href="{{ '/forum/' | relative_url }}">论坛</a></li>
-        <li><a href="{{ '/about/' | relative_url }}">关于</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
+    <div class="container header-container">
+      <!-- 网站 Logo -->
+      <a href="{{ '/' | relative_url }}" class="logo-link">
+        <img src="{{ '/logo.svg' | relative_url }}" alt="网站 Logo" class="site-logo">
+      </a>
+      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <nav>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">首页</a></li>
+          <li><a href="{{ '/intro/' | relative_url }}">游戏介绍</a></li>
+          <li><a href="{{ '/changelog/' | relative_url }}">更新日志</a></li>
+          <li><a href="{{ '/play/' | relative_url }}">在线试玩</a></li>
+          <li><a href="{{ '/download/' | relative_url }}">软件下载</a></li>
+          <li><a href="{{ '/leaderboard/' | relative_url }}">排行榜</a></li>
+          <li><a href="{{ '/gallery/' | relative_url }}">媒体库</a></li>
+          <li><a href="{{ '/forum/' | relative_url }}">论坛</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">关于</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="container">
     {{ content }}
@@ -32,10 +36,10 @@
 
   <hr>
 
-  <!-- Utterances 评论系统 -->
+  <!-- 如页面需要评论，可使用 Utterances -->
   <section id="comments">
     <script src="https://utteranc.es/client.js"
-            repo="yourusername/yourrepository"
+            repo="Tactgame/tactgam.github.io"
             issue-term="pathname"
             label="comment"
             theme="github-dark"
