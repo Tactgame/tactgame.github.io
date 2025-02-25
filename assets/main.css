@@ -232,3 +232,30 @@ form textarea {
     margin-bottom: 0.5rem;
   }
 }
+
+/* 轮播图样式 */
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 400px; /* 设置轮播图的最大高度 */
+}
+
+.slider .slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider .slide.active {
+  opacity: 1;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* 限制图片最大高度 */
+  object-fit: cover; /* 保持图片比例并覆盖整个区域 */
+}
+
