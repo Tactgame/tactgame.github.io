@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <!-- 引入 AOS 样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 </head>
 <body class="fade-in">
   <header>
-    <div class="container header-container">
+    <div class="container header-container" data-aos="fade-down">
       <!-- 网站 Logo -->
       <a href="{{ '/' | relative_url }}" class="logo-link">
-        <img src="{{ 'images/logo.svg' | relative_url }}" alt="网站 Logo" class="site-logo">
+        <img src="{{ '/logo.svg' | relative_url }}" alt="网站 Logo" class="site-logo">
       </a>
       <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
       <nav>
@@ -30,7 +32,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" data-aos="fade-up">
     {{ content }}
   </main>
 
@@ -48,8 +50,17 @@
     </script>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>&copy; {{ site.time | date: "%Y" }} 审判行动：致命瞄准. 保留所有权利.</p>
   </footer>
+
+  <!-- 引入 AOS 脚本 -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'slide'
+    });
+  </script>
 </body>
 </html>
