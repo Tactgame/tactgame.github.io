@@ -8,7 +8,7 @@ permalink: /
   <!-- 动态宣传横幅（轮播图） -->
   <div class="slider">
     <div class="slide active">
-      <img src="{{ '/images/spxd.png' | relative_url }}" alt="版本更新1" loading="lazy">
+      <img src="{{ '/images/spxdzmmz.png' | relative_url }}" alt="版本更新1" loading="lazy">
       <div class="slide-caption">
         <h2>全新版本发布！</h2>
         <p>体验全新功能，享受更畅快的狙击体验。</p>
