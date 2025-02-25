@@ -15,7 +15,7 @@ permalink: /about/
 
 如果您有任何问题或建议，请填写下方反馈表单，我们会认真阅读并改进！
 
-<form id="feedback-form" action="https://formspree.io/f/yourFormID" method="POST">
+<form id="feedback-form" action="https://formspree.io/f/xzzdlyyv" method="POST">
   <label for="name">您的姓名</label>
   <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
 
