@@ -33,7 +33,7 @@ permalink: /
 <div class="button-group" data-aos="fade-up">
   <a class="button" href="{{ '/intro/' | relative_url }}">游戏介绍</a>
   <a class="button" href="{{ '/changelog/' | relative_url }}">更新日志</a>
-  <a class="button" href="{{ '/play/' | relative_url }}">在线试玩</a>
+  <a class="button" href="{{ '/play/' | relative_url }}">开始游玩</a>
   <a class="button" href="{{ '/download/' | relative_url }}">软件下载</a>
   <a class="button" href="{{ '/leaderboard/' | relative_url }}">排行榜</a>
   <a class="button" href="{{ '/gallery/' | relative_url }}">媒体库</a>
